@@ -19,19 +19,19 @@ import com.example.marsphotos.model.MarsPhoto
 import com.example.marsphotos.network.MarsApiService
 
 /**
- * Repository that fetch mars photos list from marsApi.
+ * Repository yang mengambil daftar foto dari marsAPI.
  */
 interface MarsPhotosRepository {
-    /** Fetches list of MarsPhoto from marsApi */
+    /** Mengambil mars photo  dari API */
     suspend fun getMarsPhotos(): List<MarsPhoto>
 }
 
 /**
- * Network Implementation of Repository that fetch mars photos list from marsApi.
+Implementasi Jaringan dari Repositori yang mengambil daftar foto Mars dari marsApi.
  */
 class NetworkMarsPhotosRepository(
     private val marsApiService: MarsApiService
 ) : MarsPhotosRepository {
-    /** Fetches list of MarsPhoto from marsApi*/
+    /** Mengambil daftar marsphoto dari mars api*/
     override suspend fun getMarsPhotos(): List<MarsPhoto> = marsApiService.getPhotos()
 }

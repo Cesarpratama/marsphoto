@@ -20,11 +20,11 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * This data class defines a Mars photo which includes an ID, and the image URL.
+ *  mendefinisikan sebuah foto mars yang mrencakup id dan url.
  */
 @Serializable
 data class MarsPhoto(
-    val id: String,
+    val id: String, // id dari foto mars
     @SerialName(value = "img_src")
-    val imgSrc: String
+    val imgSrc: String  // URL gambar
 )

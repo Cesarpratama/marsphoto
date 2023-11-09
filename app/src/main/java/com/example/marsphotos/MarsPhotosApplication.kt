@@ -19,11 +19,16 @@ import android.app.Application
 import com.example.marsphotos.data.AppContainer
 import com.example.marsphotos.data.DefaultAppContainer
 
+/**
+ * Kelas Aplikasi khusus untuk aplikasi Mars Photos.
+ * Digunakan untuk inisialisasi dan memelihara AppContainer.
+ */
 class MarsPhotosApplication : Application() {
-    /** AppContainer instance used by the rest of classes to obtain dependencies */
+    /** Instance dari AppContainer yang digunakan oleh kelas lain untuk mendapatkan dependensi */
     lateinit var container: AppContainer
     override fun onCreate() {
         super.onCreate()
+        // Inisialisasi AppContainer dengan implementasi default
         container = DefaultAppContainer()
     }
 }
